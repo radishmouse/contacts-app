@@ -34,7 +34,10 @@ app.get('/contacts/:id', (req, res) => {
   });
   // TODO: check if `contact` is valid
   // (meaning, is it undefined or a real obj)
-  res.send(contact);
+  // res.send(contact);
+  res.render('contact-detail', {
+    contact
+  });
 });
 
 app.listen(8888, () => {

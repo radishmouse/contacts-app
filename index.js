@@ -12,6 +12,7 @@ app.set('view engine', '.hbs');
 app.get('/', (req, res) => {
   // res.send('HAAAAAAAAAYyyy');
   res.render('home', {
+    layout: 'homepage',
     message: "Welcome to the contacts app!",
     headerText: "Contacts App Home Page"
   });

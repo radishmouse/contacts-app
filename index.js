@@ -35,9 +35,16 @@ app.get('/contacts/:id', (req, res) => {
   // TODO: check if `contact` is valid
   // (meaning, is it undefined or a real obj)
   // res.send(contact);
-  res.render('contact-detail', {
-    contact
-  });
+  if (contact) {
+    res.render('contact-detail', {
+      contact
+    });
+  } else {
+    // how to do a redirect???
+    // res.redirect('/');
+    res.send(`<h1>Contact id ${id} does not exist. Go away.</h1>`);
+  }
+
 });
 
 app.listen(8888, () => {

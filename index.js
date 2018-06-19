@@ -58,6 +58,6 @@ app.get('/contacts/:id', (req, res) => {
 
 });
 
-app.listen(8888, () => {
-    console.log('Your express app is running at http://localhost:8888');
+app.listen(3000, () => {
+    console.log('Your express app is running at http://localhost:3000');
 });
